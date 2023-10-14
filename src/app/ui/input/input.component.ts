@@ -2,17 +2,18 @@ import {AfterViewInit, Component, Input, OnDestroy, Optional, Self} from '@angul
 import { CommonModule } from '@angular/common';
 import {ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule} from '@angular/forms';
 import {Subject, takeUntil} from 'rxjs';
+import {TranslateModule} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslateModule],
   template: `
       <div class="">
           <label
                   for="{{title}}"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >{{ title }}</label
+                  class="block mb-2 text-sm font-medium text-gray-900"
+          >{{ title | translate }}</label
           >
           <div class="mt-2">
               <div class="flex">
@@ -39,7 +40,7 @@ import {Subject, takeUntil} from 'rxjs';
           <span
                   class="text-rose-500 text-xs"
                   *ngFor="let error of keys(_control.errors ?? {})"
-          >{{ getErrorMessage(error) }}<br/>
+          >{{ getErrorMessage(error) | translate }}<br/>
           </span>
               </ng-container>
           </div>
