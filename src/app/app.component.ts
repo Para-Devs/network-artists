@@ -14,9 +14,17 @@ import {TranslateModule} from '@ngx-translate/core';
 <!--          <h1 class="text-3xl font-bold underline text-center">-->
 <!--              {{'welcome' | translate}}-->
 <!--          </h1>-->
-        <img class="logo " src="../assets/img/Network_Artist_Logo_white.svg">
+        <div class="logo">
+          <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
+        </div>
+
+        <div class="btn">
+          <button>more</button>
+        </div>
       </section>
-<!--      <section class="w-full h-full bg-slate-800 flex">-->
+
+
+    <!--      <section class="w-full h-full bg-slate-800 flex">-->
 <!--        <div class="md:w-[40%] md:h-full">-->
 <!--        </div>-->
 
