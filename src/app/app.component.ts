@@ -11,19 +11,20 @@ import {TranslateModule} from '@ngx-translate/core';
   template: `
     <app-menu-burger></app-menu-burger>
       <section class="w-full h-full">
-          <h1 class="text-3xl font-bold underline text-center">
-              {{'welcome' | translate}}
-          </h1>
+<!--          <h1 class="text-3xl font-bold underline text-center">-->
+<!--              {{'welcome' | translate}}-->
+<!--          </h1>-->
+        <img class="logo " src="../assets/img/Network_Artist_Logo_white.svg">
       </section>
-      <section class="w-full h-full bg-slate-800 flex">
-        <div class="md:w-[40%] md:h-full">
-        </div>
+<!--      <section class="w-full h-full bg-slate-800 flex">-->
+<!--        <div class="md:w-[40%] md:h-full">-->
+<!--        </div>-->
 
-        <div class="md:w-[60%] md:h-full">
-          <img alt="placeholder" class="md:h-full" src="../assets/img/placeholder.png"/>
-        </div>
-      </section>
-          <app-contact-form></app-contact-form>
+<!--        <div class="md:w-[60%] md:h-full">-->
+<!--          <img alt="placeholder" class="md:h-full" src="../assets/img/placeholder.png"/>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--          <app-contact-form></app-contact-form>-->
   `,
   styles: [],
 })
