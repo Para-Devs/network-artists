@@ -32,20 +32,43 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   standalone: true,
   imports: [CommonModule, MenuBurgerComponent, ContactFormComponent, TranslateModule],
   template: `
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-slate-800 rounde-md z-50 drop-shadow-xl p-5">
-      <h2 class="text-white">{{'coming_soon' | translate}}</h2>
+    <div class="absolute w-full h-full bg-[rgba(25,25,25,0.7)] z-40">
+
+      <div class="btn">
+        <button><a href="mailto:lj@network-artists.com">{{'contact' | translate}}</a></button>
+      </div>
+    </div>
+    <div class="pulse orange absolute top-1/2 left-1/2 transform -translate-x-1/2 bg-[rgba(35,35,35,1)] flex justify-center items-center border -translate-y-1/2 rounded-full z-50 drop-shadow-2xl shadow-green-400 p-5">
+      <img class=" ml-4 h-56 w-56" src="../assets/coming_soon.svg" alt="test">
     </div>
       <section [@fadeInOut]="true" class="w-full h-full">
         <div class="logo">
           <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
         </div>
-
-        <div class="btn">
-          <button><a href="mailto:lj@network-artists.com">{{'contact' | translate}}</a></button>
-        </div>
       </section>
  `,
-  styles: [],
+  styles: [
+    `
+      .pulse {
+        animation: pulse-animation 2s infinite;
+      }
+
+      @keyframes pulse-animation {
+        0% {
+          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
+        }
+        100% {
+          box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        }
+      }
+
+      @media (max-width:900px){
+        .master{
+          display:none
+        }
+      }
+    `
+  ],
   animations: [fadeInOut('2s')]
 })
 export class AppComponent  {
