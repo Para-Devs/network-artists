@@ -39,11 +39,13 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
         <div class="logo">
           <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
         </div>
-
-        <div class="btn">
-          <button><a href="mailto:lj@network-artists.com">{{'contact' | translate}}</a></button>
-        </div>
       </section>
+    <section class=" bg-[rgba(235,235,235,0.8)]">
+      <div class="p-10 h-56 flex justify-center ">
+      <h1>WE ARE NETWORK ARTISTS.</h1>
+      </div>
+    </section>
+    <section class="h-full">
  `,
   styles: [],
   animations: [fadeInOut('2s')]
