@@ -32,6 +32,9 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   standalone: true,
   imports: [CommonModule, MenuBurgerComponent, ContactFormComponent, TranslateModule],
   template: `
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-slate-800 rounde-md z-50 drop-shadow-xl p-5">
+      <h2 class="text-white">{{'coming_soon' | translate}}</h2>
+    </div>
       <section [@fadeInOut]="true" class="w-full h-full">
         <div class="logo">
           <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
