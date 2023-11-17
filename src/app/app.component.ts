@@ -40,7 +40,7 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
           <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
         </div>
       </section>
-    <section class=" bg-[rgba(235,235,235,0.8)]">
+    <section data-aos="fade-in" class=" bg-[rgba(235,235,235,0.8)]">
       <div class="p-10 h-56 flex justify-center ">
       <h1>WE ARE NETWORK ARTISTS.</h1>
       </div>
