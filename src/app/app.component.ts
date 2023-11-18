@@ -41,11 +41,39 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
         </div>
       </section>
     <section data-aos="fade-in" class=" bg-[rgba(235,235,235,0.8)]">
-      <div class="p-10 h-56 flex justify-center ">
+      <div class="p-10 h-56 flex flex-col items-center justify-center ">
       <h1>WE ARE NETWORK ARTISTS.</h1>
+        <p class="mt-10">A 360o music consultancy group and talent buying company that belongs at the heart of music, culture and brands.
+          Who are we? The same as you: curious minds looking to connect deeper than the surface and using music to pursue the future of sound.</p>
       </div>
     </section>
-    <section class="h-full">
+    <section data-aos="fade-right" class="bg-slate-800 h-1/2"></section>
+    <section data-aos="fade-up" class=" bg-[rgba(235,235,235,0.8)]">
+      <div class="p-10 h-56 flex flex-col items-center justify-center ">
+      <h1>OUR PURPOSE </h1>
+        <p class="mt-10">The purpose behind our company is to
+          CONNECT DOTS AND COMBINE WORKFORCES to fulfil desires and the gap in the market.</p>
+
+        <p class="mt-5">
+
+          Philipp Straub and Andrew van Ginneken were the first to incite this connection. Drawing from their numerous endeavours, rich experiences and achievements to build trust within the music industry they successfully created NETWORK ARTISTS.
+        </p>
+      </div>
+    </section>
+    <section data-aos="fade-right" class="bg-slate-800 h-1/2"></section>
+    <section data-aos="fade-up" class=" bg-[rgba(235,235,235,0.8)]">
+      <div class="p-10 h-56 flex flex-col items-center justify-center ">
+      <h1>OUR PURPOSE </h1>
+        <p class="mt-10">The purpose behind our company is to
+          CONNECT DOTS AND COMBINE WORKFORCES to fulfil desires and the gap in the market.</p>
+
+        <p class="mt-5">
+
+          Philipp Straub and Andrew van Ginneken were the first to incite this connection. Drawing from their numerous endeavours, rich experiences and achievements to build trust within the music industry they successfully created NETWORK ARTISTS.
+        </p>
+      </div>
+    </section>
+    <section class="h-full"></section>
  `,
   styles: [],
   animations: [fadeInOut('2s')]
