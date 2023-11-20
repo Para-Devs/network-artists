@@ -3,13 +3,23 @@
 @tailwind utilities;
 @import 'aos/dist/aos.css';
 
+.bg {
+
+  background-image: url('assets/img/networkArtistBackGround.png');
+}
 body {
   height: 100vh;
-  background-image: url('assets/img/networkArtistBackGround.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  opacity: 1.0;
+  -webkit-transition: background 4.5s linear;
+  -moz-transition: background 4.5s linear;
+  -o-transition: background 4.5s linear;
+  -ms-transition: background 4.5s linear;
+  transition: background 4.5s linear;
 }
 .logo{
   display: flex;
