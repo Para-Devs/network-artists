@@ -40,8 +40,9 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
               <div class="logo">
                 <img class="svg" src="../assets/img/Network_Artist_Logo_white.svg" alt="test" >
               </div>
-              <h1 class="mb-6 mt-6 text-xl test uppercase tracking-tighter">coming soon ...</h1>
-
+              <div class="mt-6 mb-6">
+              <h1 class="typewriter mb-6 mt-6 text-xl test uppercase tracking-tighter">coming soon ...</h1>
+              </div>
               <button
                 type="button"
                 class="rounded border-[0.5px] border-neutral-50 px-5 mt-5 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 animate-bounce "
@@ -58,6 +59,21 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   styles: [
 
     `
+      .typewriter {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation:
+          typing 3.5s steps(40, end),
+      }
+
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+
       .pulse {
         animation: pulse-animation 2s infinite;
       }
