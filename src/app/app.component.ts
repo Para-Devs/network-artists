@@ -34,7 +34,7 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   template: `
       <div class="overflow-x-hidden">
           <section id="header" data-aos-anchor="#header" class=" w-full min-h-screen bg-[rgba(11,40,73,0.6)]">
-              <div [@fadeInOut]="true" class="logo" data-aos="zoom-in" data-aos-duration="1500">
+              <div [@fadeInOut]="true" class="logo md:p-0 p-10" data-aos="zoom-in" data-aos-duration="1500">
                   <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
               </div>
           </section>
