@@ -33,87 +33,113 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   imports: [CommonModule, MenuBurgerComponent, ContactFormComponent, TranslateModule],
   template: `
       <div class="overflow-x-hidden">
-          <section id="header" data-aos-anchor="#header" class=" w-full min-h-screen bg-[rgba(11,40,73,0.6)]">
-              <div [@fadeInOut]="true" class="logo md:p-0 p-10" data-aos="zoom-in" data-aos-duration="1500">
+          <section id="header" data-aos-anchor="#header" class=" w-full min-h-screen bg-[rgba(255,255,255,0.0)]">
+              <div [@fadeInOut]="true" class="logo md:p-0 p-10 fixed" data-aos="zoom-in" data-aos-duration="1500">
                   <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
               </div>
           </section>
-          <div id="weare" data-aos="fade-left" class="diagonal-shape bg-[rgba(11,40,73,0.6)]"></div>
-          <section id="weare" data-aos="fade-left"
-                   class=" md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(1,14,51,0.95)] text-white justify-center">
 
-              <h1 data-aos="fade-right" class="title-right ">WE ARE NETWORK ARTISTS.</h1>
-              <p data-aos="fade-left" class="mt-10 md:mx-10 mx-5 content-text">A 360o music consultancy group and talent
-                  buying company that
-                  belongs at the
-                  heart of music, culture and brands.
-                  Who are we? The same as you: curious minds looking to connect deeper than the surface and using music
-                  to pursue the future of sound.</p>
+          <!--          <div id="weare" data-aos="fade-left" class="diagonal-shape bg-[rgba(11,40,73,0.6)]"></div>-->
 
+          <section id="weare" data-aos="fade-up"
+                   class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl bg-[rgba(255,255,255,0.8)] justify-center backdrop-blur-sm grid grid-cols-2 place-items-center">
+              <div class="ml-5">
+                  <h1 data-aos="fade-right"
+                      class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+                      <span class=" text-3xl text-gray-600 dark:text-grey-500 ">we are...<br></span> NETWORK ARTISTS.
+                  </h1>
+                  <p data-aos="fade-left" class="mt-5 content-text">
+                      A 360&#176; music consultancy group and talent
+                      buying company that
+                      belongs at the
+                      heart of music, culture and brands.<br>
+                      Who are we? The same as you: curious minds looking to connect deeper than the surface and
+                      using music
+                      to pursue the future of sound.
+                  </p>
+              </div>
+              <div data-aos="fade-up" class="">
+                  <img class="" src="../assets/img/Bildschirmfoto%202023-11-22%20um%2018.23.13.png" alt="">
+              </div>
           </section>
 
-          <!--<section data-aos="fade-right" class="bg-slate-800 h-1/2"></section>!-->
-          <section id="purpose" data-aos-anchor="#purpose" data-aos="fade-right"
-                   class="min-h-screen overflow-auto bg-[rgba(11,40,73,0.95)] text-white drop-shadow-2xl">
-              <div class="md:p-10 p-5 h-screen flex flex-col justify-center ">
-                  <h1 data-aos="fade-left" class="title-left">OUR PURPOSE </h1>
-                  <p class="mt-10 md:ml-10 ml-5 content-text">The purpose behind our company is to
-                      CONNECT DOTS AND COMBINE WORKFORCES to fulfil desires and the gap in the market.</p>
+          <!--          <section data-aos="fade-right" class="bg-slate-800 h-1/2"></section>-->
 
-                  <p data-aos="fade-right" class="mt-5 md:mx-10 mx-5 content-text">
 
-                      Philipp Straub and Andrew van Ginneken were the first to incite this connection. Drawing from
-                      their
-                      numerous endeavours, rich experiences and achievements to build trust within the music industry
-                      they
-                      successfully created NETWORK ARTISTS.
+          <section id="purpose" data-aos-anchor="#purpose" data-aos="fade-in"
+                   class="min-h-screen overflow-auto bg-[rgba(11,40,73,0.95)] text-white drop-shadow-2xl justify-center backdrop-blur-sm grid grid-cols place-items-center center ">
+              <div class="ml-3 align-center">
+                  <p data-aos="fade-left" class="mb-4 content-text text-center">The purpose behind our company is to</p>
+                  <h1 data-aos="fade-right"
+                      class="text-4xl font-extrabold leading-none tracking-tight text-white-900 md:text-3xl lg:text-4xl text-center">
+                      CONNECT DOTS AND COMBINE WORKFORCES
+                  </h1>
+                  <p data-aos="fade-left" class="content-text text-center"><br>to fulfil desires and the gap in the
+                      market.</p>
+                  <p data-aos="fade-left" class="mt-8 content-text text-center">
+                      Philipp Straub and Andrew van Ginneken were the first to incite this <br>
+                      connection. Drawing from their numerous endeavours, rich experiences <br>
+                      and achievements to build trust within the music industry they<br>
+                      successfully created <span class=" text-4xl text-white-600 dark:text-white-500"> <strong>NETWORK ARTISTS.</strong></span>
                   </p>
               </div>
           </section>
+
+
           <section id="bio" data-aos-anchor="#bio" data-aos="fade-up"
-                   class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(1,14,51,0.95)] text-white justify-center">
-              <h1 data-aos="fade-up" class="title-left-6">BIO</h1>
-              <h1 data-aos="fade-left" class="title-left ml-5 ">ANDREW</h1>
-              <ul data-aos="fade-left" data-aos-delay="200" class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
-                  <li class="mt-5">Promoted 1000+ shows across the UK, working with the biggest electronic artists,
-                      labels and brands
-                      of
-                      the time.
-                  </li>
-                  <li class="mt-5">Operated 7 music venues across South East UK.</li>
-                  <li class="mt-5">Brokered agreements with labels such as EMI and BMG on breakthrough pop/rock acts of
-                      the time.
-                  </li>
-                  <li class="mt-5">Worked as Senior agent at Paramount Artists, gaining experience representing talent
-                      on a global scale, negotiating multi-million Euro contracts and planning tours worldwide.
-                  </li>
-                  <li class="mt-5">Manages Grammy-nominated & multi-million record selling house music legend Dennis
-                      Ferrer.
-                  </li>
-              </ul>
-              <h1 data-aos="fade-left" class="title-left ml-5 ">PHILLIP</h1>
-              <ul data-aos="fade-left" data-aos-delay="200" class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
-                  <li class="mt-5">Globally touring DJ and 1st Austrian live act signed to Sony. - Partnered ID&T’s
-                      Merchandise &
-                      Ticketing operation
-                      in Austria.
-                  </li>
-                  <li class="mt-5">Produced and distributed The Partysan franchise.</li>
-                  <li class="mt-5">CEO of the 1st DJ booking agency in Austria, Titan International.
-                  </li>
-                  <li class="mt-5">Introduced brands such as Timewarp, Creamfields, Mayday, Loveparade and more into new
-                      markets. -
-                      Former music consultant for Coca Cola and Monster
-                      Energy group.
-                  </li>
-                  <li class="mt-5">Previous head of music for Burn Energy active in 122 countries and head mentor for
-                      Burn Residency. -
-                      General consultant Sekoya Management Group and music advisor for Soho Garden Developments in UAE
-                      and
-                      across the GCC area.
-                  </li>
-              </ul>
+                   class="md:p-10 p-5 min-h-screen drop-shadow-2xl items-center bg-[rgba(1,14,51,0.95)] text-white grid grid-cols-2">
+
+             <div>
+               <h1 data-aos="fade-left" class="title-left ml-5 ">ANDREW</h1>
+               <ul data-aos="fade-left" data-aos-delay="200" class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
+                 <li class="mt-5">Promoted 1000+ shows across the UK, working with the biggest electronic artists,
+                   labels and brands
+                   of
+                   the time.
+                 </li>
+                 <li class="mt-5">Operated 7 music venues across South East UK.</li>
+                 <li class="mt-5">Brokered agreements with labels such as EMI and BMG on breakthrough pop/rock acts of
+                   the time.
+                 </li>
+                 <li class="mt-5">Worked as Senior agent at Paramount Artists, gaining experience representing talent
+                   on a global scale, negotiating multi-million Euro contracts and planning tours worldwide.
+                 </li>
+                 <li class="mt-5">Manages Grammy-nominated & multi-million record selling house music legend Dennis
+                   Ferrer.
+                 </li>
+               </ul>
+
+             </div>
+             <div>
+               <h1 data-aos="fade-left" class="title-left ml-5 ">PHILLIP</h1>
+               <ul data-aos="fade-left" data-aos-delay="200" class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
+                 <li class="mt-5">Globally touring DJ and 1st Austrian live act signed to Sony. - Partnered ID&T’s
+                   Merchandise &
+                   Ticketing operation
+                   in Austria.
+                 </li>
+                 <li class="mt-5">Produced and distributed The Partysan franchise.</li>
+                 <li class="mt-5">CEO of the 1st DJ booking agency in Austria, Titan International.
+                 </li>
+                 <li class="mt-5">Introduced brands such as Timewarp, Creamfields, Mayday, Loveparade and more into new
+                   markets. -
+                   Former music consultant for Coca Cola and Monster
+                   Energy group.
+                 </li>
+                 <li class="mt-5">Previous head of music for Burn Energy active in 122 countries and head mentor for
+                   Burn Residency. -
+                   General consultant Sekoya Management Group and music advisor for Soho Garden Developments in UAE
+                   and
+                   across the GCC area.
+                 </li>
+               </ul>
+             </div>
           </section>
+
+
+
+
+
           <section id="service" data-aos-anchor="#service" data-aos="fade-down"
                    class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(1,14,51,0.8)] text-white justify-center">
               <h1 data-aos="fade-up" class="title-right-6">Service</h1>
@@ -152,7 +178,8 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
                    class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(11,40,73,0.95)] text-white justify-center">
 
               <h1 data-aos="fade-right" class="title-right">TALENT BUYING</h1>
-              <p data-aos="fade-left" class="mt-10 md:mx-10   mx-5 content-text">Our database includes direct contacts to
+              <p data-aos="fade-left" class="mt-10 md:mx-10   mx-5 content-text">Our database includes direct contacts
+                  to
                   all talent within the world of electronic music and beyond. We are privileged to have personal and
                   strong relationships with many artists, managers and agents, which helps us ensure a smooth and fast
                   operation. The rise and growth in electronic music has brought many new possibilities, from festivals,
@@ -197,7 +224,8 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
                    class=" md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(1,14,51,0.95)] text-white justify-center">
 
               <h1 data-aos="fade-right" class="title-left">GLOBAL ROLL-OUTS.</h1>
-              <p data-aos="fade-left" class="mt-10 mr-5 ml-5 md:mr-10 md:ml-10 content-text">Network Artists brings to light the
+              <p data-aos="fade-left" class="mt-10 mr-5 ml-5 md:mr-10 md:ml-10 content-text">Network Artists brings to
+                  light the
                   pioneering features of your brand through unique strategies and 360o rollouts to launch a total brand
                   activation, which will create the opportunity for global recognition, growth and value across
                   worldwide markets.
@@ -206,17 +234,22 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
               </p>
               <ul data-aos="fade-right" class="mt-10 mr-10 ml-16 content-text">
                   <li class="mt-5">Data analysis and subsequent planning.</li>
-                  <li class="mt-5">Organic workflows and modular structures to maximise growth potential and results.</li>
+                  <li class="mt-5">Organic workflows and modular structures to maximise growth potential and results.
+                  </li>
                   <li class="mt-5">Immersive events that embody your core principles and overall presence.</li>
               </ul>
           </section>
-        <section id="outro" data-aos-anchor="#outro" data-aos="fade-in"
-                 class=" flex  min-h-screen flex-col drop-shadow-2xl items-center justify-center bg-white text-[rgba(1,14,51,0.8)] md:p-20 p-5">
-          <h1 data-aos="fade-left" class="title-right">OUTRO</h1>
-          <p data-aos="fade-right" class="mt-10 md:mx-10 mx-5  content-text">
-            After 30 years in the music industry, we have not only acquired the knowledge, experience and network, but the recognition as one of the leading consultancy companies that stands for quality. We have immersed ourselves in every aspect of the industry, leaving our signature on the music scene – Whether you are a venue owner, an event promoter or an entertainment/lifestyle focused hospitality group, we can put ourselves in your world.<br><br>
-            Let’s connect dots.
-        </section>
+          <section id="outro" data-aos-anchor="#outro" data-aos="fade-in"
+                   class=" flex  min-h-screen flex-col drop-shadow-2xl items-center justify-center bg-white text-[rgba(1,14,51,0.8)] md:p-20 p-5">
+              <h1 data-aos="fade-left" class="title-right">OUTRO</h1>
+              <p data-aos="fade-right" class="mt-10 md:mx-10 mx-5  content-text">
+                  After 30 years in the music industry, we have not only acquired the knowledge, experience and network,
+                  but the recognition as one of the leading consultancy companies that stands for quality. We have
+                  immersed ourselves in every aspect of the industry, leaving our signature on the music scene – Whether
+                  you are a venue owner, an event promoter or an entertainment/lifestyle focused hospitality group, we
+                  can put ourselves in your world.<br><br>
+                  Let’s connect dots.
+          </section>
           <section class="h-full"></section>
       </div>
   `,
