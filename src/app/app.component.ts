@@ -42,10 +42,10 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
           <!--          <div id="weare" data-aos="fade-left" class="diagonal-shape bg-[rgba(11,40,73,0.6)]"></div>-->
 
           <section id="weare" data-aos="fade-up"
-                   class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl bg-[rgba(255,255,255,0.8)] justify-center backdrop-blur-sm grid grid-cols-2 place-items-center">
-              <div class="ml-5">
+                   class="min-w-screen drop-shadow-2xl bg-[rgba(255,255,255,0.8)] justify-center backdrop-blur-sm flex flex-col lg:flex-row place-items-center">
+              <div class="md:w-full p-8">
                   <h1 data-aos="fade-right"
-                      class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+                      class="text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
                       <span class=" text-3xl text-gray-600 dark:text-grey-500 ">we are...<br></span> NETWORK ARTISTS.
                   </h1>
                   <p data-aos="fade-left" class="mt-5 content-text">
@@ -58,22 +58,23 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
                       to pursue the future of sound.
                   </p>
               </div>
-              <div data-aos="fade-up" class="">
-                  <img class="" src="../assets/img/Bildschirmfoto%202023-11-22%20um%2018.23.13.png" alt="">
+              <div data-aos="fade-up" class="w-full">
+                  <img class="w-full" src="../assets/img/Bildschirmfoto%202023-11-22%20um%2018.23.13.png" alt="">
               </div>
           </section>
+
 
           <!--          <section data-aos="fade-right" class="bg-slate-800 h-1/2"></section>-->
 
 
           <section id="purpose" data-aos-anchor="#purpose" data-aos="fade-in"
                    class="min-h-screen overflow-auto bg-[rgba(11,40,73,0.95)] text-white drop-shadow-2xl justify-center backdrop-blur-sm grid grid-cols place-items-center center ">
-              <div class="ml-3 align-center">
+              <div class="mmd:w-full p-8">
                   <p data-aos="fade-left" class="mb-4 content-text text-center">The purpose behind our company is to</p>
-                  <h1 data-aos="fade-right"
-                      class="text-4xl font-extrabold leading-none tracking-tight text-white-900 md:text-3xl lg:text-4xl text-center">
+                  <h2 data-aos="fade-right"
+                      class="text-4xl font-extrabold leading-none  tracking-tight text-white-900 md:text-3xl lg:text-4xl text-center">
                       CONNECT DOTS AND COMBINE WORKFORCES
-                  </h1>
+                  </h2>
                   <p data-aos="fade-left" class="content-text text-center"><br>to fulfil desires and the gap in the
                       market.</p>
                   <p data-aos="fade-left" class="mt-8 content-text text-center">
@@ -84,71 +85,104 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
                   </p>
               </div>
           </section>
+        <section id="service" data-aos-anchor="#service" data-aos="fade-down"
+                 class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(1,14,51,0.8)] text-white justify-center">
+          <h1 data-aos="fade-up" class="title-right-6">Services</h1>
 
+          <p data-aos="fade-in" class="mt-10 md:mx-10 mx-5 content-text">
+            From strategic planning, project management to on-site execution...
+            Our in-house team provides customised support, guidance and consultancy on all project needs.
+          </p>
+        </section>
+
+
+        <!--            todo: flipcard : section = container , card mit font and back face, font: img , back: text, name kein plan -->
 
           <section id="bio" data-aos-anchor="#bio" data-aos="fade-up"
-                   class="md:p-10 p-5 min-h-screen drop-shadow-2xl items-center bg-[rgba(1,14,51,0.95)] text-white grid grid-cols-2">
+                   class=" min-h-screen drop-shadow-2xl items-center bg-[rgba(1,14,51,0.95)] text-white flex flex-col lg:flex-row place-items-center">
 
-             <div>
-               <h1 data-aos="fade-left" class="title-left ml-5 ">ANDREW</h1>
-               <ul data-aos="fade-left" data-aos-delay="200" class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
-                 <li class="mt-5">Promoted 1000+ shows across the UK, working with the biggest electronic artists,
-                   labels and brands
-                   of
-                   the time.
-                 </li>
-                 <li class="mt-5">Operated 7 music venues across South East UK.</li>
-                 <li class="mt-5">Brokered agreements with labels such as EMI and BMG on breakthrough pop/rock acts of
-                   the time.
-                 </li>
-                 <li class="mt-5">Worked as Senior agent at Paramount Artists, gaining experience representing talent
-                   on a global scale, negotiating multi-million Euro contracts and planning tours worldwide.
-                 </li>
-                 <li class="mt-5">Manages Grammy-nominated & multi-million record selling house music legend Dennis
-                   Ferrer.
-                 </li>
-               </ul>
+              <div class="md:w-full p-8 card">
 
-             </div>
-             <div>
-               <h1 data-aos="fade-left" class="title-left ml-5 ">PHILLIP</h1>
-               <ul data-aos="fade-left" data-aos-delay="200" class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
-                 <li class="mt-5">Globally touring DJ and 1st Austrian live act signed to Sony. - Partnered ID&T’s
-                   Merchandise &
-                   Ticketing operation
-                   in Austria.
-                 </li>
-                 <li class="mt-5">Produced and distributed The Partysan franchise.</li>
-                 <li class="mt-5">CEO of the 1st DJ booking agency in Austria, Titan International.
-                 </li>
-                 <li class="mt-5">Introduced brands such as Timewarp, Creamfields, Mayday, Loveparade and more into new
-                   markets. -
-                   Former music consultant for Coca Cola and Monster
-                   Energy group.
-                 </li>
-                 <li class="mt-5">Previous head of music for Burn Energy active in 122 countries and head mentor for
-                   Burn Residency. -
-                   General consultant Sekoya Management Group and music advisor for Soho Garden Developments in UAE
-                   and
-                   across the GCC area.
-                 </li>
-               </ul>
-             </div>
+                  <div class="font border w-25 relative">
+                      <img src="../assets/img/test2.png" alt="" class="absolute z-10">
+
+                      <div class="rounded-full border m-6 relative">
+                          <img data-aos="fade-up" class="rounded-full center cursor-pointer "
+                               src="../assets/img/placeholder.png"
+                               alt="image description">
+                      </div>
+                  </div>
+
+                  <div class="back">
+                      <!--                  <h1 data-aos="fade-left" class="title-left ml-5 ">ANDREW VAN GINNEKEN</h1>-->
+                      <ul data-aos="fade-left" data-aos-delay="200"
+                          class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
+                          <li class="mt-5">Promoted 1000+ shows across the UK, working with the biggest electronic
+                              artists,
+                              labels and brands
+                              of
+                              the time.
+                          </li>
+                          <li class="mt-5">Operated 7 music venues across South East UK.</li>
+                          <li class="mt-5">Brokered agreements with labels such as EMI and BMG on breakthrough pop/rock
+                              acts
+                              of
+                              the time.
+                          </li>
+                          <li class="mt-5">Worked as Senior agent at Paramount Artists, gaining experience representing
+                              talent
+                              on a global scale, negotiating multi-million Euro contracts and planning tours worldwide.
+                          </li>
+                          <li class="mt-5">Manages Grammy-nominated & multi-million record selling house music legend
+                              Dennis
+                              Ferrer.
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+
+              <div class="md:w-full p-8 card">
+
+                <div class="font border w-25 relative">
+                  <img src="../assets/img/test2.png" alt="" class="absolute">
+                  <img data-aos="fade-up" class=" border rounded-full  w-30 h-30 cursor-pointer"
+                       src="../assets/img/placeholder.png" alt="image description">
+                </div>
+
+                  <div class="back">
+                      <h1 data-aos="fade-left" class="title-left ml-5 ">PHILLIP STRAUB</h1>
+                      <ul data-aos="fade-left" data-aos-delay="200"
+                          class="mt-10 md:mr-10 md:ml-16 ml-5 mr-5 content-text">
+                          <li class="mt-5">Globally touring DJ and 1st Austrian live act signed to Sony. - Partnered
+                              ID&T’s
+                              Merchandise &
+                              Ticketing operation
+                              in Austria.
+                          </li>
+                          <li class="mt-5">Produced and distributed The Partysan franchise.</li>
+                          <li class="mt-5">CEO of the 1st DJ booking agency in Austria, Titan International.
+                          </li>
+                          <li class="mt-5">Introduced brands such as Timewarp, Creamfields, Mayday, Loveparade and more
+                              into new
+                              markets. -
+                              Former music consultant for Coca Cola and Monster
+                              Energy group.
+                          </li>
+                          <li class="mt-5">Previous head of music for Burn Energy active in 122 countries and head
+                              mentor for
+                              Burn Residency. -
+                              General consultant Sekoya Management Group and music advisor for Soho Garden Developments
+                              in UAE
+                              and
+                              across the GCC area.
+                          </li>
+                      </ul>
+                  </div>
+              </div>
           </section>
 
 
-
-
-
-          <section id="service" data-aos-anchor="#service" data-aos="fade-down"
-                   class="md:p-10 p-5 min-h-screen flex flex-col drop-shadow-2xl items-center bg-[rgba(1,14,51,0.8)] text-white justify-center">
-              <h1 data-aos="fade-up" class="title-right-6">Service</h1>
-
-              <p data-aos="fade-in" class="mt-10 md:mx-10 mx-5 content-text">
-                  From strategic planning, project management to on-site execution...
-                  Our in-house team provides customised support, guidance and consultancy on all project needs.
-              </p>
-          </section>
           <section id="vision" data-aos-anchor="#vision" data-aos="fade-in"
                    class=" flex flex-col drop-shadow-2xl items-center justify-center bg-white text-[rgba(1,14,51,0.8)] p-20">
               <h1 data-aos="fade-in" data-aos-delay="100" class="title-6">HOW CAN WE BRING YOUR VISION TO LIFE?</h1>
@@ -254,6 +288,7 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
       </div>
   `,
   styles: [`
+
     .title-right {
       @apply font-bold justify-end flex w-full mt-5 mr-5 md:text-4xl text-2xl;
     }
