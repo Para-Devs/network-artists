@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
+import {CommonModule, DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-connect',
@@ -16,6 +16,13 @@ import { CommonModule } from '@angular/common';
   `,
   styles: ``
 })
-export class ConnectComponent {
+export class ConnectComponent implements OnInit, OnDestroy {
+  doc = inject(DOCUMENT);
+  ngOnInit() {
+    this.doc.body.classList.add("connect");
+  }
+  ngOnDestroy() {
+    this.doc.body.classList.remove("connect");
 
+  }
 }
