@@ -6,9 +6,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      connect works!
-    </p>
+    <section class="w-full h-full flex  items-center flex-col">
+        <h1 class="text-center mt-40 leading-[100px] text-white uppercase text-[130px]">Curious<br>to know more?</h1>
+        <a href="mailto:ps@network-artists.com" class="bg-slate-800 bg-[rgba(0,0,35,0.7)] text-center mt-20 leading-[30px] min-w-[200px] p-10 text-white uppercase text-[30px] border-2 border-white">
+          ps&#64;network-artists.com</a>
+      <a href="mailto:avg@network-artists.com" class="text-center bg-[rgba(0,0,35,0.7)] mt-20 leading-[30px] min-w-[200px] p-10 text-white uppercase text-[30px] border-2 border-white">
+          avg&#64;network-artists.com</a>
+    </section>
   `,
   styles: ``
 })
