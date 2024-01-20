@@ -7,7 +7,7 @@ import {ServiceComponent} from './routes/service/service.component';
 import {VisionComponent} from './routes/vision/vision.component';
 
 export const appRoutes: Routes = [
-  {path: '*', redirectTo: 'home' },
+  {path: '', pathMatch: 'full', redirectTo: 'home' },
   {path: 'home', pathMatch: 'full', component: HomeComponent },
   {path: 'connect', pathMatch: 'full', component: ConnectComponent},
   {path: 'method', pathMatch: 'full', component: MethodComponent},

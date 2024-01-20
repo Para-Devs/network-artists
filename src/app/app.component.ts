@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TranslateModule} from '@ngx-translate/core';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {RouterOutlet} from '@angular/router';
 function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   return trigger(
     'fadeInOut',
@@ -28,14 +29,9 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterOutlet],
   template: `
-    <div class="absolute w-full h-full bg-[rgba(25,25,25,0.7)] z-40">
-      <section [@fadeInOut]="true" class="w-full h-full">
-        <div class="logo">
-          <img src="../assets/img/Network_Artist_Logo_white.svg" alt="test">
-        </div>
-      </section>
+    <router-outlet></router-outlet>
  `,
   styles: [
     `
