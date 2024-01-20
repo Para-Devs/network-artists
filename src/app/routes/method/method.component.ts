@@ -6,9 +6,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      method works!
-    </p>
+    <section class="w-full h-full flex  items-center flex-row">
+      <div class="w-1/3"><p>One</p></div>
+      <div class="w-1/3"><p>Two</p></div>
+      <div class="w-1/3"><p>Three</p></div>
+    </section>
   `,
   styles: ``
 })
