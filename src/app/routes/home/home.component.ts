@@ -6,9 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="absolute w-full h-full bg-[rgba(25,25,25,0.7)] z-40">
-      <section class="w-full h-full">
-        <div class="logo">
+      <section class="w-full h-full flex justify-center items-center">
+        <div class="logo scale-75">
           <img src="../../../assets/img/Network_Artist_Logo_white.svg" alt="test">
         </div>
       </section>

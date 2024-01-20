@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {TranslateModule} from '@ngx-translate/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {RouterOutlet} from '@angular/router';
+import {NavComponent} from './core/nav/nav.component';
 function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   return trigger(
     'fadeInOut',
@@ -29,8 +30,9 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TranslateModule, RouterOutlet],
+  imports: [CommonModule, TranslateModule, RouterOutlet, NavComponent],
   template: `
+    <app-nav></app-nav>
     <router-outlet></router-outlet>
  `,
   styles: [
