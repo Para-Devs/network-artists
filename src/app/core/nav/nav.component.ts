@@ -10,6 +10,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
   template: `
     <div class="w-full">
     <div class=" w-full  mx-auto flex justify-between px-20 py-5 border-b-[1px] border-b-white">
+      <a routerLinkActive="active-route" class="route" routerLink="home">Network Artists</a>
       <a routerLinkActive="active-route" class="route" routerLink="vision">Vision</a>
       <a routerLinkActive="active-route" class="route" routerLink="mission">Mission</a>
       <a routerLinkActive="active-route" class="route" routerLink="method">Method</a>
