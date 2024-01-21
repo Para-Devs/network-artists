@@ -36,6 +36,7 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
     <router-outlet></router-outlet>
  `,
   styles: [
+
     `
       .pulse {
         animation: pulse-animation 2s infinite;

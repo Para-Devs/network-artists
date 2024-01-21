@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-      <section class="w-full h-full flex  items-center flex-col">
+
+      <section class="w-full h-full flex  items-center flex-col service">
           <ng-container
                   *ngFor="let tab of tabs"
           >
@@ -30,6 +31,22 @@ import { CommonModule } from '@angular/common';
     `
     .talent_buying {
       background-color: wheat;
+    }
+    .service{
+        background-image: linear-gradient(
+            100deg,
+            hsl(208deg 32% 49%) 0%,
+            hsl(209deg 34% 44%) 12%,
+            hsl(209deg 36% 39%) 22%,
+            hsl(210deg 39% 34%) 32%,
+            hsl(211deg 42% 29%) 42%,
+            hsl(211deg 48% 24%) 52%,
+            hsl(211deg 49% 23%) 62%,
+            hsl(211deg 51% 22%) 71%,
+            hsl(211deg 54% 21%) 81%,
+            hsl(212deg 56% 19%) 90%,
+            hsl(212deg 59% 18%) 100%
+        );
     }
     `
   ]
