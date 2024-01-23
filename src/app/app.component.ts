@@ -34,6 +34,7 @@ function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
   imports: [CommonModule, TranslateModule, RouterOutlet, NavComponent, MenuBurgerComponent],
   template: `
     <app-nav></app-nav>
+    <app-burger></app-burger>
     <router-outlet></router-outlet>
  `,
   styles: [
