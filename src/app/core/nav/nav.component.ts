@@ -9,7 +9,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
   imports: [CommonModule, RouterLinkActive, RouterLink],
   template: `
     <div class="w-full">
-    <div class=" w-full  mx-auto flex justify-between px-20 py-5 border-b-[1px] border-b-white">
+    <div class="hidden w-full mx-auto md:flex justify-between px-20 py-5 border-b-[1px] border-b-white">
       <a routerLinkActive="active-route" class="route" routerLink="home">Network Artists</a>
       <a routerLinkActive="active-route" class="route" routerLink="vision">Vision</a>
       <a routerLinkActive="active-route" class="route" routerLink="mission">Mission</a>
@@ -17,6 +17,9 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
       <a routerLinkActive="active-route" class="route"  routerLink="service">Service</a>
       <a routerLinkActive="active-route" class="route" routerLink="connect">Connect</a>
     </div>
+      <div class="md:hidden block  md:flex justify-between px-5 py-5 ">
+        <p class="text-white">Network Artists</p>
+      </div>
     </div>
   `,
   styles: `

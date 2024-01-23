@@ -1,29 +1,32 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, HostListener, inject, Inject, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 
 interface MenuItem {
   title: string;
   childItems?: MenuItem[];
   showChilds?: boolean;
+  routerLink?: string;
 }
 
 @Component({
   selector: 'app-burger',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLinkActive, RouterLink],
   template: `
     <div>
-      <div class="fixed top-5 right-5 bg-white " (click)="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="50px" width="20" height="20" viewBox="0 0 50 50">
-          <path
-            d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+      <div class="fixed top-5 right-5 text-white md:hidden block" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+             stroke-width="1.5" stroke="currentColor" [class.rotate-180]="menuVisible"
+             class="hover:scale-110 cursor-pointer transition-all duration-300 transform w-6 h-6 titlebar-button">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/>
         </svg>
       </div>
-      <div *ngIf="menuVisible" class=" fixed  w-[120px] h-[500px] right-[25px] top-10">
+      <div *ngIf="menuVisible" class="bg-[rgba(235,235,235,0.8)] fixed mt-5 rounded-md pl-5 pr-7 py-5 w-auto  right-[25px] top-10">
         <ng-container *ngFor="let item of menuItems">
           <div (mouseenter)="item.showChilds = true" (mouseleave)="item.showChilds = false"
-               class="cursor-pointer">
-            <div style="color: #F9F9F9" (click)="selectItem(item)">
+               class="cursor-pointer" >
+            <div  (click)="selectItem(item)" class="text-black" >
               {{item.title}}
             </div>
             <ng-container *ngIf="item.childItems && item.showChilds">
@@ -47,18 +50,17 @@ interface MenuItem {
 })
 export class MenuBurgerComponent {
   menuVisible = false;
-  selectedAnchor!: string;
+  router: Router = inject(Router);
+  elementRef: ElementRef = inject(ElementRef);
   menuItems: MenuItem[] = [
-    {title: 'Home'},
-    {title: 'Info'},
-    {
-      title: 'Service',
-      childItems: [{title: 'Test'}]
-    },
-    {title: 'Background'},
-    {title: 'References'},
-    {title: 'Contact'},
+    {title: 'Network Artists',routerLink: 'home'},
+    {title: 'Vision', routerLink: 'vision'},
+    {title: 'Mission', routerLink: 'mission'},
+    {title: 'Method', routerLink: 'method'},
+    {title: 'Service', routerLink: 'service'},
+    {title: 'Connect', routerLink: 'connect'},
   ]
+
 
   toggleMenu(): void {
     this.menuVisible = !this.menuVisible
@@ -66,13 +68,18 @@ export class MenuBurgerComponent {
 
   selectItem(item: MenuItem) {
     if (item.childItems) {
-
       return;
     }
-    this.selectedAnchor = item.title;
     this.menuVisible = false;
+    return this.router.navigate([item.routerLink]);
   }
   activateChildMenu(item: MenuItem) {
     item.showChilds = true;
   }
+  /*@HostListener('document:click', ['$event'])
+  clickout(event: any) {
+    if(!this.elementRef.nativeElement.contains(event.target)) {
+      this.toggleMenu();
+    }
+  }*/
 }
