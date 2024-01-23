@@ -24,6 +24,14 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.method {
+  background-image:linear-gradient(to bottom, rgb(17, 40, 70), rgba(17, 40, 70, 0.73)), url("assets/img/Network_Artist_Method_Background.png")!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain ;
+  background-attachment: fixed;
+}
 .logo{
   display: flex;
   justify-content: center;
