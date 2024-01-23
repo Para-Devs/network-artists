@@ -6,11 +6,11 @@ import {CommonModule, DOCUMENT} from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-      <section class="w-full h-full flex  items-center flex-col bg">
-          <div class="mx-40">
-              <h1 class="text-center mt-40 leading-[100px] text-white uppercase text-[130px]">Our mission<br>Is to
+      <section class="w-full h-full flex  items-center flex-col bg overflow-x-hidden">
+          <div class="md:mx-40 mx-20">
+              <h1 class="text-center mt-40 leading-[37px] md:leading-[100px] text-white uppercase text-[50px] md:text-[130px]">Our mission<br>Is to
                   connect</h1>
-              <h1 class="text-center mt-20 leading-[90px] p-10 text-white uppercase text-[130px] border-2 border-white">
+              <h1 class="text-center mt-20  leading-[30px] md:leading-[90px] p-10 text-white uppercase  text-[40px] md:text-[130px] border-2 border-white">
                   The dots.</h1>
           </div>
       </section>
