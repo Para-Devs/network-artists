@@ -12,7 +12,7 @@ import {fadeInOut} from '../../animations';
     <div [@fadeInOut]="true" class="w-full flex justify-center items-center">
     </div>
     <section class="w-full h-full flex justify-center items-center">
-      <div  class="logo" [innerHtml]="svgContent"></div>
+      <div  class="logo scale-75" [innerHtml]="svgContent"></div>
     </section>
   `,
   styles: [`
