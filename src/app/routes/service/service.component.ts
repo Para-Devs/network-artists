@@ -19,11 +19,11 @@ import {fadeInOut} from '../../animations';
 
       <ng-template #entry let-ctx>
           <div class="mt-2 w-full ">
-              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full bg-[rgba(235,235,235,0.7)] h-auto min-h-[50px] rounded-t-md  center pl-5 pt-2">
+              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md  center pl-5 pt-2">
                   <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer">{{ctx.title}}</p>
               </div>
               <div *ngIf="ctx.isExpanded"
-                   class="{{fixTitle(ctx.title)}} w-full px-10 pb-10 bg-[rgba(235,235,235,0.7)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
+                   class="{{fixTitle(ctx.title)}} w-full px-10 pb-10 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
                   <p>
                       {{ctx.text}}
                   </p>

@@ -8,9 +8,9 @@ import {fadeInOut} from '../../animations';
   imports: [CommonModule],
   template: `
     <section [@fadeInOut]="true" class="w-full h-full flex  items-center flex-col">
-      <h1 class="text-center mt-40 md:leading-[90px] leading-[36px] text-white uppercase text-[50px] md:text-[130px]">Bring your<br>Vision to life.</h1>
-        <p class="md:mx-32 mx-5 md:text-[30px] text-white mt-20">A 360º music consultancy group and talent buying company that belongs at the heart of music, culture and brands.
-
+      <h1 class="text-center mt-32 leading-[37px] md:leading-[100px] text-white uppercase text-[50px] md:text-[130px]">Bring your<br>Vision to life.</h1>
+      <p class="m-3 text-white mt-20 text-center md:text-[30px] md:mx-auto md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">A 360º music consultancy group and talent
+        buying company that belongs at the heart of music, culture and brands.
           Who are we? The same as you: curious minds looking to connect deeper than the surface and using music to pursue the future of sound.</p>
     </section>
   `,
