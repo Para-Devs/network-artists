@@ -47,7 +47,7 @@ import {fadeInOut} from '../../animations';
       </section>
   `,
   styles: ``,
-  animations: [fadeInOut('2s')]
+  animations: [fadeInOut('4s')]
 })
 export class ConnectComponent implements OnInit, OnDestroy {
   doc = inject(DOCUMENT);

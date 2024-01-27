@@ -1,6 +1,7 @@
 import {Component, ElementRef, HostListener, inject, Inject, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import {fadeInOut} from "../../animations";
 
 interface MenuItem {
   title: string;
@@ -22,7 +23,8 @@ interface MenuItem {
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/>
         </svg>
       </div>
-      <div *ngIf="menuVisible" class="bg-[rgba(235,235,235,0.9)] fixed mt-5 rounded-md pl-5 pr-7 py-5 w-auto  right-[25px] top-10 z-50">
+      section
+      <div *ngIf="menuVisible" [@fadeInOut]="true" class="bg-[rgba(235,235,235,0.9)] fixed mt-5 rounded-md pl-5 pr-7 py-5 w-auto  right-[25px] top-10 z-50">
         <ng-container *ngFor="let item of menuItems">
           <div (mouseenter)="item.showChilds = true" (mouseleave)="item.showChilds = false"
                class="cursor-pointer" >
@@ -46,9 +48,8 @@ interface MenuItem {
       </div>
     </ng-template>
   `,
-  styles: [
-
-  ]
+  styles: [],
+  animations: [fadeInOut('0.5s')]
 })
 export class MenuBurgerComponent {
   menuVisible = false;
@@ -66,6 +67,7 @@ export class MenuBurgerComponent {
 
   toggleMenu(): void {
     this.menuVisible = !this.menuVisible
+
   }
 
   selectItem(item: MenuItem) {

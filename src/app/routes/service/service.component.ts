@@ -43,7 +43,7 @@ import {fadeInOut} from '../../animations';
     }
     `
   ],
-  animations: [fadeInOut('2s')]
+  animations: [fadeInOut('4s')]
 })
 export class ServiceComponent implements OnInit, OnDestroy{
   fixTitle = (t: string) => t.replace(/ /g, '_').toLowerCase();

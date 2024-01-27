@@ -17,7 +17,7 @@ import {fadeInOut} from '../../animations';
   styles: [`
 
   `],
-  animations: [fadeInOut('2s')]
+  animations: [fadeInOut('4s')]
 })
 export class MissionComponent implements OnInit, OnDestroy {
   doc = inject(DOCUMENT);
