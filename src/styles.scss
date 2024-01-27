@@ -76,23 +76,11 @@ body {
   color: #002B4F;
 }
 
-//position methods
-.methods{
-  position: absolute;
-}
-
-.method .planning{
-  top: 15%;
-  right: 45%;
-}
-
-.method .activation{
-  bottom: 15%;
-  left: 30%;
-}
-.method .execution{
-  right: 30%
-}
 .keksi{
   cursor: pointer;
+}
+
+//todo : tablet and desktop img size
+.method-img{
+  width: 50%;
 }
