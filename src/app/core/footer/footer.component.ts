@@ -6,9 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      footer works!
-    </p>
+      <div class="fixed bottom-0 pr-2 w-full text-white flex justify-end ">
+        <p>Network Artists</p>
+      </div>
   `,
   styles: ``
 })

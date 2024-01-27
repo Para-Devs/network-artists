@@ -27,7 +27,8 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
     @apply underline;
   }
   .route {
-    @apply text-white uppercase;
+    @apply text-white uppercase   transition-all ease-in-out  hover:scale-105;
+
   }
   `
 })

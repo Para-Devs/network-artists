@@ -1,41 +1,21 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {TranslateModule} from '@ngx-translate/core';
-import {animate, style, transition, trigger} from '@angular/animations';
 import {RouterOutlet} from '@angular/router';
 import {NavComponent} from './core/nav/nav.component';
 import {MenuBurgerComponent} from "./core/burger/burger.component";
-function fadeInOut(fadeInTime = '1s', fadeOutTime = '1s') {
-  return trigger(
-    'fadeInOut',
-    [
-      transition(
-        ':enter',
-        [
-          style({  opacity: 0 }),
-          animate(fadeOutTime+ ' ease-out',
-            style({  opacity: 1 }))
-        ]
-      ),
-      transition(
-        ':leave',
-        [
-          style({ opacity: 1 }),
-          animate(fadeInTime+' ease-in',
-            style({ opacity: 0 }))
-        ]
-      )
-    ]
-  );
-}
+import {fadeInOut} from './animations';
+import {FooterComponent} from './core/footer/footer.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TranslateModule, RouterOutlet, NavComponent, MenuBurgerComponent],
+  imports: [CommonModule, TranslateModule, RouterOutlet, NavComponent, MenuBurgerComponent, FooterComponent],
   template: `
     <app-nav></app-nav>
     <app-burger></app-burger>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
  `,
   styles: [
 

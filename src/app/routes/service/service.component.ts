@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {fadeInOut} from '../../animations';
 
 @Component({
   selector: 'app-service',
@@ -7,7 +8,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
 
-      <section class="w-full h-full flex  items-center flex-col service">
+      <section [@fadeInOut]="true" class="w-full h-full flex  items-center flex-col service">
           <ng-container
                   *ngFor="let tab of tabs"
           >
@@ -33,7 +34,8 @@ import { CommonModule } from '@angular/common';
       background-color: wheat;
     }
     `
-  ]
+  ],
+  animations: [fadeInOut('2s')]
 })
 export class ServiceComponent {
   fixTitle = (t: string) => t.replace(/ /g, '_').toLowerCase();
