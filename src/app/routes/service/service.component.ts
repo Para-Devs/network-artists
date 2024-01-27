@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
+import {CommonModule, DOCUMENT} from '@angular/common';
 import {fadeInOut} from '../../animations';
 
 @Component({
@@ -19,11 +19,11 @@ import {fadeInOut} from '../../animations';
 
       <ng-template #entry let-ctx>
           <div class="mt-2 w-full ">
-              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full bg-white h-auto min-h-[50px] rounded-t-md border-t-2 border-l-2 border-r-2 center pl-5">
-                  <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer mt-2">{{ctx.title}}</p>
+              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full bg-[rgba(235,235,235,0.7)] h-auto min-h-[50px] rounded-t-md  center pl-5 pt-2">
+                  <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer">{{ctx.title}}</p>
               </div>
               <div *ngIf="ctx.isExpanded"
-                   class="{{fixTitle(ctx.title)}} w-full px-10 pb-10 bg-white h-auto min-h-[50px] border-l-2 rounded-b-md  border-r-2 border-bottom-2 center">
+                   class="{{fixTitle(ctx.title)}} w-full px-10 pb-10 bg-[rgba(235,235,235,0.7)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
                   <p>
                       {{ctx.text}}
                   </p>
@@ -41,7 +41,7 @@ import {fadeInOut} from '../../animations';
   ],
   animations: [fadeInOut('2s')]
 })
-export class ServiceComponent {
+export class ServiceComponent implements OnInit, OnDestroy{
   fixTitle = (t: string) => t.replace(/ /g, '_').toLowerCase();
   tabs = [
     {
@@ -104,5 +104,14 @@ Immersive events that embody your core principles and overall presence.`,
       return ctxEntry;
     })
     ctx.isExpanded = ! ctx.isExpanded;
+  }
+
+  doc = inject(DOCUMENT);
+  ngOnInit() {
+    this.doc.body.classList.add("service");
+  }
+  ngOnDestroy() {
+    this.doc.body.classList.remove("service");
+
   }
 }
