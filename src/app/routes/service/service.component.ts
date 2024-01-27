@@ -8,7 +8,8 @@ import {fadeInOut} from '../../animations';
   imports: [CommonModule],
   template: `
 
-      <section [@fadeInOut]="true" class="w-full h-full flex  items-center flex-col service">
+      <section [@fadeInOut]="true"
+               class="mx-auto mt-20 h-full overflow-y-scroll flex  md:w-[70%] w-[90%]   items-center flex-col service">
           <ng-container
                   *ngFor="let tab of tabs"
           >
@@ -17,10 +18,13 @@ import {fadeInOut} from '../../animations';
       </section>
 
       <ng-template #entry let-ctx>
-          <div>
-              <p (click)="ctx.isExpanded = ! ctx.isExpanded" class="uppercase">{{ctx.title}}</p>
-              <div class="{{fixTitle(ctx.title)}}">
-                  <p *ngIf="ctx.isExpanded">
+          <div class="mt-2 w-full ">
+              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full bg-white h-auto min-h-[50px] rounded-t-md border-t-2 border-l-2 border-r-2 center pl-5">
+                  <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer mt-2">{{ctx.title}}</p>
+              </div>
+              <div *ngIf="ctx.isExpanded"
+                   class="{{fixTitle(ctx.title)}} w-full px-10 pb-10 bg-white h-auto min-h-[50px] border-l-2 rounded-b-md  border-r-2 border-bottom-2 center">
+                  <p>
                       {{ctx.text}}
                   </p>
               </div>
@@ -31,7 +35,7 @@ import {fadeInOut} from '../../animations';
   styles: [
     `
     .talent_buying {
-      background-color: wheat;
+      // background-color: wheat;
     }
     `
   ],
@@ -42,27 +46,63 @@ export class ServiceComponent {
   tabs = [
     {
       title: 'consultancy',
-      text: 'blablablablabla',
+      text: `We work with our partners to develop long-term strategies to strike gold and obtain milestones that feel beyond reach, and we’re  available  to support every step of the way:
+
+We help you navigate the entire in-house executional process by designing an optimal organisational structure and timeline to fast-track your goals.
+
+Depending on the scale of the project, we can outsource, on-board and nurture local teams.
+
+If you want your event to have the voice it deserves, we are also the key to unlocking access to  top artists worldwide and from all genres. Our network includes top event producers and artists to create unique customer experiences that last.`,
       isExpanded: false,
     },
     {
       title: 'Talent buying',
-      text: 'blablablablabla',
+      text: `Our database includes direct contacts to all talent within the world of electronic music and beyond. We are privileged to have personal and strong relationships with many artists, managers and agents, which helps us ensure a smooth and fast operation. The rise and growth in electronic music has brought many new possibilities, from festivals, to collaborations and it has opened doors in the ever-evolving genres of pop, rock and urban.`,
       isExpanded: false,
     },{
       title: 'Event management',
-      text: 'blablablablabla',
+      text: `
+The NETWORK ARTISTS are your sidekick to custom event management, from conceptualization to coordination, to implementation.
+
+We play a competitive role in the perimeters of public and private events, whether it is discreet for your close circle, or you are a corporation looking to connect brands and talent for universal exposure. There’s always an event master plan that encompasses the venue, logistics and entertainment to ensure that everyone in your world holds an everlasting imprint of the experience.`,
       isExpanded: false,
     },
     {
       title: 'Show creation',
-      text: 'blablablablabla',
+      text: `At the heart of our offering is our dynamic creative team who is always ready to transform your brand identity. Whether you're a new venue aiming for a unique vibe and a recognisable profile, a DJ looking to upscale your performances with a modern audio aspect, or a touring band seeking to revamp your show... we've got you covered. But that's not all—we're here to customise ideas for corporate presentations, merchandise, and beyond. With us, your brand's potential is limited only by your imagination.
+
+Our experience:
+
+Crafting unique brand identities and aesthetics.
+
+Enhancing DJ performances / touring with innovative audio, visuals and overall production.
+
+Customising creative solutions for corporate presentations, merchandise, and more…`,
       isExpanded: false,
     },
     {
       title: 'Global rollouts',
-      text: 'blablablablabla',
+      text: `Network Artists brings to light the pioneering features of your brand through unique strategies and 360º rollouts to launch a total brand activation, which will create the opportunity for global recognition, growth and value across worldwide markets.
+
+
+The secret formula:
+
+Data analysis and subsequent planning.
+
+Organic workflows and modular structures to maximise growth potential and results.
+
+Immersive events that embody your core principles and overall presence.`,
       isExpanded: false,
     }
   ]
+
+  toggleCtx(ctx: any) {
+    this.tabs = this.tabs.map(ctxEntry => {
+      if(ctxEntry.title !== ctx.title) {
+        ctxEntry.isExpanded = false;
+      }
+      return ctxEntry;
+    })
+    ctx.isExpanded = ! ctx.isExpanded;
+  }
 }
