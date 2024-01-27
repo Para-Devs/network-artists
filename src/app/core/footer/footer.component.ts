@@ -6,11 +6,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-      <div class="fixed bottom-0 pr-2 w-full text-white flex justify-end ">
-        <p>Network Artists</p>
-      </div>
+
+<!--     todo: icons footer ? oder text ? -->
+<!--      <div class="fixed bottom-0 pr-2 w-full text-white flex justify-end ">-->
+<!--        <p  class="">Network Artists</p>-->
+<!--      </div>-->
   `,
-  styles: ``
+  styles: `
+  `
 })
 export class FooterComponent {
 

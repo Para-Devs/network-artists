@@ -18,15 +18,15 @@ interface MenuItem {
       <div class="fixed top-5 right-5 text-white md:hidden block" (click)="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
              stroke-width="1.5" stroke="currentColor" [class.rotate-180]="menuVisible"
-             class="hover:scale-110 cursor-pointer transition-all duration-300 transform w-6 h-6 titlebar-button">
+             class="hover:scale-110 cursor-pointer transition-all duration-300 transform w-6 h-6 title bar-button">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/>
         </svg>
       </div>
-      <div *ngIf="menuVisible" class="bg-[rgba(235,235,235,0.8)] fixed mt-5 rounded-md pl-5 pr-7 py-5 w-auto  right-[25px] top-10">
+      <div *ngIf="menuVisible" class="bg-[rgba(235,235,235,0.9)] fixed mt-5 rounded-md pl-5 pr-7 py-5 w-auto  right-[25px] top-10 z-50">
         <ng-container *ngFor="let item of menuItems">
           <div (mouseenter)="item.showChilds = true" (mouseleave)="item.showChilds = false"
                class="cursor-pointer" >
-            <div  (click)="selectItem(item)" class="text-black" >
+            <div  (click)="selectItem(item)" class="text-blue-900 text-2xl mb-2  uppercase" >
               {{item.title}}
             </div>
             <ng-container *ngIf="item.childItems && item.showChilds">
@@ -46,14 +46,16 @@ interface MenuItem {
       </div>
     </ng-template>
   `,
-  styles: []
+  styles: [
+
+  ]
 })
 export class MenuBurgerComponent {
   menuVisible = false;
   router: Router = inject(Router);
   elementRef: ElementRef = inject(ElementRef);
   menuItems: MenuItem[] = [
-    {title: 'Network Artists',routerLink: 'home'},
+    {title: 'Network',routerLink: 'home'},
     {title: 'Vision', routerLink: 'vision'},
     {title: 'Mission', routerLink: 'mission'},
     {title: 'Method', routerLink: 'method'},

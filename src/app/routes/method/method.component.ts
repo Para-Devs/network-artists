@@ -11,6 +11,7 @@ import {CommonModule, DOCUMENT} from '@angular/common';
         <img class="bg-center bg- bg-no-repeat bg-fixed method-img mt-4 hidden sm:block"
              src="../../../assets/img/network_method_all.png" alt="">
       </div>
+
       <div class="mobile flex flex-col justify-items-start content-center flex-wrap sm:hidden">
         <div class="planning bg-[rgba(235,235,235,0.2)] m-3 rounded fade-in-up">
           <div class=" text-white  p-5 methods planning ">
@@ -156,6 +157,11 @@ import {CommonModule, DOCUMENT} from '@angular/common';
             </ul>
           </div>
         </div>
+      </div>
+
+
+      <div class="fixed  bottom-0 mb-1.5 pr-2 w-full text-white flex justify-end text-[rgba(255,255,255,0.3)]  ">
+        <p class="footer-text uppercase text-4xl font-extralight">Methods</p>
       </div>
     </section>
   `,

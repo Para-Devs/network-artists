@@ -9,7 +9,7 @@ import {fadeInOut} from '../../animations';
   imports: [CommonModule, NavComponent],
   template: `
       <section  [@fadeInOut]="true" class="w-full h-full flex  items-center flex-col overflow-x-hidden">
-          <h1 class="text-center mt-20 md:leading-[100px] text-white uppercase md:text-[130px] text-[80px] leading-[60px]">
+          <h1 class="text-center mt-10 md:mt-20 lg:mt-32 leading-[37px] md:leading-[100px] text-white uppercase text-[50px] md:text-[130px]">
               Curious<br>to know more?</h1>
 
         <!-- Container for the Team -->

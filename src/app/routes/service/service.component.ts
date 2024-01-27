@@ -9,7 +9,7 @@ import {fadeInOut} from '../../animations';
   template: `
 
       <section [@fadeInOut]="true"
-               class="mx-auto mt-20 h-full overflow-y-scroll flex  md:w-[70%] w-[90%]   items-center flex-col service">
+               class="mx-auto mt-10 md:mt-20 lg:mt-32  h-full overflow-y-scroll flex md:w-[70%] w-[80%] text-white   items-center flex-col service">
           <ng-container
                   *ngFor="let tab of tabs"
           >
@@ -18,12 +18,12 @@ import {fadeInOut} from '../../animations';
       </section>
 
       <ng-template #entry let-ctx>
-          <div class="mt-2 w-full ">
-              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md  center pl-5 pt-2">
-                  <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer">{{ctx.title}}</p>
+          <div class="mt-2 w-full z-20 ">
+              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full p-5 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md center text-2xl">
+                  <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer ">{{ctx.title}}</p>
               </div>
               <div *ngIf="ctx.isExpanded"
-                   class="{{fixTitle(ctx.title)}} w-full px-10 pb-10 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
+                   class="{{fixTitle(ctx.title)}} tap-animation w-full px-10 pb-10 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
                   <p>
                       {{ctx.text}}
                   </p>
@@ -31,6 +31,10 @@ import {fadeInOut} from '../../animations';
           </div>
 
       </ng-template>
+
+      <div class="fixed bottom-0  mb-1.5 pr-1 w-full text-white flex justify-end text-[rgba(255,255,255,0.3)]  ">
+        <p class="footer-text uppercase text-4xl font-extralight">Service</p>
+      </div>
   `,
   styles: [
     `

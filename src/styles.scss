@@ -76,11 +76,11 @@ body {
   color: #002B4F;
 }
 
-.keksi{
-  cursor: pointer;
-}
-
-//todo : tablet and desktop img size
 .method-img{
   width: 50%;
 }
+.footer-text{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
