@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
+import {CommonModule, DOCUMENT} from '@angular/common';
 import {fadeInOut} from '../../animations';
 
 @Component({
@@ -17,6 +17,13 @@ import {fadeInOut} from '../../animations';
   styles: ``,
   animations: [fadeInOut('2s')]
 })
-export class VisionComponent {
+export class VisionComponent implements OnInit,OnDestroy{
+  doc = inject(DOCUMENT);
+  ngOnInit() {
+    this.doc.body.classList.add("vision");
+  }
+  ngOnDestroy() {
+    this.doc.body.classList.remove("vision");
 
+  }
 }
