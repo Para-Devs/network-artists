@@ -6,12 +6,12 @@ import {CommonModule, DOCUMENT} from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="w-full h-full method">
-<div class="big flex justify-center items-center ">
+    <section class="w-full h-full ">
+      <div class="big flex justify-center items-center ">
   <img class="bg-center bg- bg-no-repeat bg-fixed method-img mt-4 hidden sm:block" src="../../../assets/img/network_method_all.png" alt="">
 </div>
-      <div class="mobile flex flex-col justify-items-start content-center flex-wrap sm:hidden">
-        <div class="planning bg-[rgba(235,235,235,0.2)] m-3 rounded ">
+        <div class="mobile flex flex-col justify-items-start content-center flex-wrap sm:hidden">
+        <div class="planning bg-[rgba(235,235,235,0.2)] m-3 rounded fade-in-up">
           <div class=" text-white  p-5 methods planning ">
             <ul class="space-y-4">
               <li class="flex items-center">
@@ -48,8 +48,8 @@ import {CommonModule, DOCUMENT} from '@angular/common';
             </ul>
           </div>
         </div>
-        <div class="activation bg-[rgba(235,235,235,0.2)] m-3 rounded ">
-          <div class=" text-white  p-5 methods planning ">
+        <div class="activation bg-[rgba(235,235,235,0.2)] m-3 rounded fade-in-up">
+          <div class=" text-white  p-5 methods planning fade-in-up">
             <ul class="space-y-4">
               <li class="flex items-center">
                 <span class="text-2xl">02</span>
@@ -145,7 +145,23 @@ import {CommonModule, DOCUMENT} from '@angular/common';
       </div>
     </section>
   `,
-  styles: ` `,
+  styles: `
+   @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.9s ease-out;
+}
+
+   `,
 })
 export class MethodComponent {
   doc = inject(DOCUMENT);
