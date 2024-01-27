@@ -10,10 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.method {
-  background-image: unset!important;
-  background-color: #002B4F;
-}
+
 .mission {
   background-image: linear-gradient(to bottom, rgba(82, 127, 154, 0.52), rgba(17, 40, 70, 0.73)), url("assets/img/backgroundMissionComponent.jpeg")!important;
   background-position: center;
@@ -22,10 +19,18 @@ body {
   background-attachment: fixed;
 }
 .connect {
-  background-image:linear-gradient(to bottom, rgba(82, 127, 154, 0.52), rgba(17, 40, 70, 0.73)), url("assets/img/backgroundConnectComponent.jpeg")!important;
+  background-image:linear-gradient(to bottom, rgb(17, 40, 70), rgba(17, 40, 70, 0.73)), url("assets/img/backgroundConnectComponent.jpeg")!important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.method {
+  background-image:linear-gradient(to bottom, rgb(17, 40, 70), rgba(17, 40, 70, 0.73))!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain ;
   background-attachment: fixed;
 }
 .logo{
@@ -54,7 +59,23 @@ body {
   color: #002B4F;
 }
 
+//position methods
+.methods{
+  position: absolute;
+}
 
+.method .planning{
+  top: 15%;
+  right: 45%;
+}
+
+.method .activation{
+  bottom: 15%;
+  left: 30%;
+}
+.method .execution{
+  right: 30%
+}
 .keksi{
   cursor: pointer;
 }
