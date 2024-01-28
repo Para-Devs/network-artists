@@ -9,7 +9,7 @@ import {fadeInOut} from "../../animations";
   template: `
     <section class="w-full h-full " [@fadeInOut]="true">
       <div class="big flex justify-center items-center ">
-        <img class="bg-center bg- bg-no-repeat bg-fixed method-img mt-4 hidden sm:block"
+        <img class="bg-center bg- bg-no-repeat bg-fixed method-img mt-4 hidden sm:block md:w-2/3 sm:w-full"
              src="../../../assets/img/network_method_all.png" alt="">
       </div>
 
