@@ -7,7 +7,7 @@ interface MenuItem {
   title: string;
   childItems?: MenuItem[];
   showChilds?: boolean;
-  routerLink?: string;
+  routerLink: string;
 }
 
 @Component({
@@ -27,7 +27,7 @@ interface MenuItem {
         <ng-container *ngFor="let item of menuItems">
           <div (mouseenter)="item.showChilds = true" (mouseleave)="item.showChilds = false"
                class="cursor-pointer" >
-            <div  (click)="selectItem(item)" class="text-blue-900 text-2xl mb-2  uppercase" >
+            <div  (click)="selectItem(item)" [class.underline]="iteIsActive(item)" class="text-blue-900 text-2xl mb-2  uppercase" >
               {{item.title}}
             </div>
             <ng-container *ngIf="item.childItems && item.showChilds">
@@ -85,4 +85,7 @@ export class MenuBurgerComponent {
       this.toggleMenu();
     }
   }*/
+  iteIsActive(item: MenuItem) {
+    return window.location.href.includes(item.routerLink);
+  }
 }
