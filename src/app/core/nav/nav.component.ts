@@ -22,15 +22,14 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
       </div>
     </div>
   `,
-  styles: `
+  styles: [`
   .active-route {
-    @apply underline;
+    @apply font-bold  scale-105;
   }
   .route {
-    @apply text-white uppercase   transition-all ease-in-out  hover:scale-105;
-
-  }
-  `
+    @apply text-white uppercase   transition-all ease-in-out  hover:scale-105 hover:font-bold;
+  }`
+  ]
 })
 export class NavComponent {
   routes = appRoutes;
