@@ -161,8 +161,8 @@ import {fadeInOut} from "../../animations";
       </div>
 
 
-      <div class="fixed  bottom-0 mb-1.5 pr-2 w-full text-white flex justify-end text-[rgba(255,255,255,0.3)]  ">
-        <p class="footer-text uppercase text-4xl font-extralight">Methods</p>
+      <div class="fixed  bottom-0 mb-1.5 pr-2 w-full text-white flex justify-end ">
+        <p class="footer-text uppercase text-4xl font-extralight text-[rgba(255,255,255,0.3)] ">Methods</p>
       </div>
     </section>
   `,

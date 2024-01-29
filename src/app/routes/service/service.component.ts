@@ -20,27 +20,73 @@ import {fadeInOut} from '../../animations';
       <ng-template #entry let-ctx>
           <div class="mt-2 w-full z-20 ">
               <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full p-5 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md center text-2xl">
-                  <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer ">{{ctx.title}}</p>
+
+                <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer ">
+                  <i class=" icono icon-arrow-left-up"></i>
+                  {{ctx.title}}</p>
               </div>
               <div *ngIf="ctx.isExpanded"
                    class="{{fixTitle(ctx.title)}} tap-animation w-full px-10 pb-10 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
+
                   <p>
-                      {{ctx.text}}
+                     {{ctx.text}}
                   </p>
               </div>
           </div>
 
       </ng-template>
 
-      <div class="fixed bottom-0  mb-1.5 pr-1 w-full text-white flex justify-end text-[rgba(255,255,255,0.3)]  ">
-        <p class="footer-text uppercase text-4xl font-extralight">Service</p>
+      <div class="fixed bottom-0  mb-1.5 pr-1 w-full text-white flex justify-end ">
+        <p class="footer-text uppercase text-4xl font-extralight text-[rgba(255,255,255,0.3)]">Service</p>
       </div>
   `,
   styles: [
     `
-    .talent_buying {
-      // background-color: wheat;
-    }
+      .icono {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        color: #ffffff;
+        box-sizing: border-box;
+
+        &:after, &:before {
+          content: "";
+          box-sizing: border-box;
+        }
+      }
+
+      .icon-arrow-left-up {
+        width: 20px;
+        height: 20px;
+        border-width: 4px 4px 0 0;
+        border-style: solid;
+        margin: 10px;
+
+        &:before {
+          right: 0;
+          top: -3px;
+          position: absolute;
+          height: 4px;
+          box-shadow: inset 0 0 0 32px;
+          transform: rotate(-45deg);
+          width: 23px;
+          transform-origin: right top;
+        }
+
+        &[class*="-left"] {
+          transform: rotate(45deg);
+
+          &[class*="-up"] {
+            transform: none;
+          }
+        }
+      }
+
+
+
+      .talent_buying {
+        // background-color: wheat;
+      }
     `
   ],
   animations: [fadeInOut('4s')]
