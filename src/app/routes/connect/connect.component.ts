@@ -15,7 +15,7 @@ import {fadeInOut} from '../../animations';
         <!-- Container for the Team -->
         <div class="flex flex-wrap justify-center text-center">
           <!-- First  -->
-          <div class="person text-white m-5 bg-[rgba(235,235,235,0.2)] p-5 rounded">
+          <div class="person text-white m-5 bg-[rgba(235,235,235,0.2)] pt-5 px-5 pb-8 rounded">
             <div class="mb-6 flex justify-center">
               <img
                 src="../../../assets/img/phil_profil.jpeg"
@@ -27,6 +27,9 @@ import {fadeInOut} from '../../animations';
                  class="email text-center mt-10 min-w-[200px] md:p-10 p-5 md:mt-20 mx-5 text-white ">
                 ps&#64;network-artists.com</a>
             </p>
+            <div class="arrow-container">
+              <span class="arrow"></span>
+            </div>
           </div>
 
           <!-- Second -->
@@ -42,33 +45,100 @@ import {fadeInOut} from '../../animations';
                  class="email text-center mt-20  min-w-[200px] md:p-10 p-5 md:mt-10 mx-5 text-white ">
                 avg&#64;network-artists.com</a>
             </p>
+
+            <div class="arrow-container">
+              <span class="arrow"></span>
+
+            </div>
           </div>
         </div>
       </section>
   `,
   styles: [`
+
+    .arrow-container {
+      position: relative;
+    }
+
+    span.arrow {
+      width: 2vmin;
+      height: 2vmin;
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: rotate(-225deg);
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-width: .2vmin .2vmin 0 0;
+        border-style: solid;
+        border-color: #fafafa;
+        transition: .2s ease;
+        display: block;
+        transform-origin: 100% 0;
+      }
+
+
+      &:after {
+        content: '';
+        float: left;
+        position: relative;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        border-width: 0 .2vmin 0 0;
+        border-style: solid;
+        border-color: #fafafa;
+        transform-origin: 100% 0;
+        transition: .2s ease-in-out;
+      }
+
+      &:hover::after {
+        transform: rotate(45deg);
+        border-color: #ffffff;
+        height: 120%;
+      }
+
+      &:hover::before {
+        border-color: #ffffff;
+        transform: scale(.8);
+
+      }
+
+    }
+
     .person {
       transition: all ease 1000ms;
+
       img {
         transition: all ease 500ms;
       }
+
       .email {
         transition: all ease 400ms;
       }
+
       .name {
         transition: all ease 200ms;
       }
+
       &:hover {
         transform: scale(105%);
-        filter: drop-shadow(0 0 0.75rem white);
+        filter: drop-shadow(0 0 0.80rem rgba(255, 255, 255, 0.4));
+
         img {
           transform: scale(105%);
         }
+
         .email {
-          text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em white;
+          text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em rgba(255, 255, 255, 0.4);
         }
+
         .name {
-          text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em white;
+          text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em rgba(255, 255, 255, 0.4);
         }
       }
     }

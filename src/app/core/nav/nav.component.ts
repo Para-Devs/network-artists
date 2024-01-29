@@ -23,13 +23,14 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
     </div>
   `,
   styles: [`
-  .active-route {
-    @apply font-bold  scale-105;
-    text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em white;
-  }
-  .route {
-    @apply text-white uppercase   transition-all ease-in-out  hover:scale-105 hover:font-bold;
-  }`
+    .active-route {
+      @apply font-bold  scale-105;
+      text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em rgba(255, 255, 255, 0.4);
+    }
+
+    .route {
+      @apply text-white uppercase   transition-all ease-in-out  hover:scale-105 hover:font-bold;
+    }`
   ]
 })
 export class NavComponent {
