@@ -22,7 +22,7 @@ import {fadeInOut} from '../../animations';
               <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full p-5 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md center text-2xl">
 
                 <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer ">
-                  <i class=" icono icon-arrow-left-up"></i>
+                  <i class=" icono icon-arrow-right-up"></i>
                   {{ctx.title}}</p>
               </div>
               <div *ngIf="ctx.isExpanded"
@@ -55,12 +55,13 @@ import {fadeInOut} from '../../animations';
         }
       }
 
-      .icon-arrow-left-up {
+      .icon-arrow-right-up {
         width: 20px;
         height: 20px;
         border-width: 4px 4px 0 0;
         border-style: solid;
         margin: 10px;
+        transition: transform 0.3s ease-in-out;
 
         &:before {
           right: 0;
@@ -80,12 +81,9 @@ import {fadeInOut} from '../../animations';
             transform: none;
           }
         }
-      }
-
-
-
-      .talent_buying {
-        // background-color: wheat;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     `
   ],

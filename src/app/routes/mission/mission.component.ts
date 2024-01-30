@@ -22,7 +22,7 @@ import {fadeInOut} from '../../animations';
   styles: [`
 
     .main {
-      -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+      -webkit-filter: blur(5px);
       filter: blur(2px);
       width: 330px;
       height: 330px;
@@ -37,7 +37,7 @@ import {fadeInOut} from '../../animations';
     }
 
     .circle {
-      -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+      -webkit-filter: blur(5px);
       filter: blur(5px);
       width: 30px;
       height: 30px;
