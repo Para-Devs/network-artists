@@ -65,7 +65,7 @@ import {fadeInOut} from '../../animations';
       height: 2vmin;
       box-sizing: border-box;
       position: absolute;
-      left: 50%;
+      left: 45%;
       top: 50%;
       transform: rotate(-225deg);
 
