@@ -61,6 +61,7 @@ import {fadeInOut} from '../../animations';
     }
 
     span.arrow {
+      cursor: pointer;
       width: 2vmin;
       height: 2vmin;
       box-sizing: border-box;
@@ -139,6 +140,21 @@ import {fadeInOut} from '../../animations';
 
         .name {
           text-shadow: 1px 1px 2px transparent, 0 0 1em transparent, 0 0 0.2em rgba(255, 255, 255, 0.4);
+        }
+        span.arrow {
+          @apply animate-pulse;
+          &:after {
+            transform: rotate(45deg);
+            border-color: #ffffff;
+            height: 120%;
+          }
+
+          &:before {
+            border-color: #ffffff;
+            transform: scale(.8);
+
+          }
+
         }
       }
     }
