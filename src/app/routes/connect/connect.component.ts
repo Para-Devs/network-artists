@@ -25,8 +25,10 @@ import {fadeInOut} from '../../animations';
             <p class="mb-4">
               <a href="mailto:ps@network-artists.com"
                  class="email text-center mt-10 min-w-[200px] md:p-10 p-5 md:mt-20 mx-5 text-white ">
-                ps&#64;network @ network-artist.com</a>
+                </a>
+
             </p>
+            <div>network_at_network-artists.com</div>
 <!--            <div class="arrow-container">-->
 <!--              <span class="arrow"></span>-->
 <!--            </div>-->
@@ -43,9 +45,9 @@ import {fadeInOut} from '../../animations';
             <p class="mb-4">
               <a href="mailto:avg@network-artists.com"
                  class="email text-center mt-20  min-w-[200px] md:p-10 p-5 md:mt-10 mx-5 text-white ">
-                avg&#64;network @ network-artist.com</a>
+                </a>
             </p>
-
+            <div>network_at_network-artists.com</div>
 <!--            <div class="arrow-container">-->
 <!--              <span class="arrow"></span>-->
 <!--            </div>-->
