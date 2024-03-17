@@ -10,12 +10,16 @@ import {fadeInOut} from '../../animations';
       <section [@fadeInOut]="true" class="w-full h-full flex  items-center flex-col bg overflow-x-hidden">
               <h1 class="text-center mt-32 leading-[37px] md:leading-[100px] text-white uppercase text-[50px] md:text-[130px]">Our mission<br>Is to
                   connect</h1>
-              <h2 class="text-center mt-20  leading-[30px] md:leading-[90px] p-10 text-white uppercase  text-[40px] md:text-[130px] border-2 border-white font-extralight">
+              <h2 class="text-center mt-20  leading-[30px] md:leading-[90px] p-10 text-white uppercase  text-[40px] md:text-[130px] font-extralight">
                   The dots.</h2>
 
 <!--        play with circle animation -->
         <div class="main">
           <div class="circle"></div>
+        </div>
+
+        <div class="fixed  bottom-0 mb-1.5 pr-2 w-full text-white flex justify-end ">
+          <p class="footer-text uppercase text-4xl font-extralight text-[rgba(255,255,255,0.3)] ">Mission</p>
         </div>
       </section>
   `,
