@@ -19,11 +19,11 @@ import {fadeInOut} from '../../animations';
 
       <ng-template #entry let-ctx>
           <div class="mt-2 w-full z-20 ">
-              <div [class.rounded-b-md]="!ctx.isExpanded" class="w-full p-5 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md center text-2xl">
+              <div (click)="toggleCtx(ctx)" [class.rounded-b-md]="!ctx.isExpanded" class=" cursor-pointer w-full p-5 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] rounded-t-md center flex justify-between flex-row  text-2xl">
 
-                <p (click)="toggleCtx(ctx)" class="uppercase cursor-pointer ">
-                  <i class=" icono icon-arrow-right-up"></i>
+                <p  class="uppercase cursor-pointer ">
                   {{ctx.title}}</p>
+                <i class=" icono rotate-cls icon-arrow-right-up"></i>
               </div>
               <div *ngIf="ctx.isExpanded"
                    class="{{fixTitle(ctx.title)}} tap-animation w-full px-10 pb-10 bg-[rgba(235,235,235,0.4)] h-auto min-h-[50px] border-l-2 rounded-b-md  center">
@@ -42,6 +42,9 @@ import {fadeInOut} from '../../animations';
   `,
   styles: [
     `
+      .rotate-cls {
+        rotate: 133deg;
+      }
       .icono {
         position: relative;
         display: inline-block;
