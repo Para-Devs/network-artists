@@ -25,10 +25,11 @@ import {fadeInOut} from '../../animations';
             <p class="mb-4">
               <a href="mailto:ps@network-artists.com"
                  class="email text-center mt-10 min-w-[200px] md:p-10 p-5 md:mt-20 mx-5 text-white ">
+                ps&#64;network-artists.com
                 </a>
 
             </p>
-            <div>network_at_network-artists.com</div>
+            <!--<div>network_at_network-artists.com</div>!-->
 <!--            <div class="arrow-container">-->
 <!--              <span class="arrow"></span>-->
 <!--            </div>-->
@@ -45,9 +46,10 @@ import {fadeInOut} from '../../animations';
             <p class="mb-4">
               <a href="mailto:avg@network-artists.com"
                  class="email text-center mt-20  min-w-[200px] md:p-10 p-5 md:mt-10 mx-5 text-white ">
+                ps&#64;network-artists.com
                 </a>
             </p>
-            <div>network_at_network-artists.com</div>
+            <!--<div>network_at_network-artists.com</div>!-->
 <!--            <div class="arrow-container">-->
 <!--              <span class="arrow"></span>-->
 <!--            </div>-->
@@ -97,7 +99,7 @@ import {fadeInOut} from '../../animations';
         transform-origin: 100% 0;
         transition: .2s ease-in-out;
       }
-
+      /*
       &:hover::after {
         transform: rotate(45deg);
         border-color: #ffffff;
@@ -108,7 +110,7 @@ import {fadeInOut} from '../../animations';
         border-color: #ffffff;
         transform: scale(.8);
 
-      }
+      }*/
 
     }
 
@@ -127,7 +129,7 @@ import {fadeInOut} from '../../animations';
         transition: all ease 200ms;
       }
 
-      &:hover {
+      /*&:hover {
         transform: scale(105%);
         filter: drop-shadow(0 0 0.80rem rgba(255, 255, 255, 0.4));
 
@@ -157,7 +159,7 @@ import {fadeInOut} from '../../animations';
           }
 
         }
-      }
+      }*/
     }
   `],
   animations: [fadeInOut('4s')]
