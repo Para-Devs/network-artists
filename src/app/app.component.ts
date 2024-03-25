@@ -13,7 +13,6 @@ import {FooterComponent} from './core/footer/footer.component';
   imports: [CommonModule, TranslateModule, RouterOutlet, NavComponent, MenuBurgerComponent, FooterComponent],
   template: `
     <app-nav></app-nav>
-    <app-burger></app-burger>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
  `,

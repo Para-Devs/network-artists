@@ -9,7 +9,7 @@ import {fadeInOut} from '../../animations';
   template: `
 
       <section [@fadeInOut]="true"
-               class="mx-auto mt-10 md:mt-20 lg:mt-32  h-full overflow-y-scroll flex md:w-[70%] w-[80%] text-white   items-center flex-col service">
+               class="mx-auto scrollbar-hide mt-10 md:mt-20 lg:mt-32  h-full overflow-y-scroll flex md:w-[70%] w-[80%] text-white   items-center flex-col service">
           <ng-container
                   *ngFor="let tab of tabs"
           >
@@ -42,6 +42,15 @@ import {fadeInOut} from '../../animations';
   `,
   styles: [
     `
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* For IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
       .rotate-cls {
         rotate: 133deg;
       }
@@ -104,12 +113,12 @@ We help you navigate the entire in-house executional process by designing an opt
 Depending on the scale of the project, we can outsource, on-board and nurture local teams.
 
 If you want your event to have the voice it deserves, we are also the key to unlocking access to  top artists worldwide and from all genres. Our network includes top event producers and artists to create unique customer experiences that last.`,
-      isExpanded: false,
+      isExpanded: true,
     },
     {
       title: 'Talent buying',
       text: `Our database includes direct contacts to all talent within the world of electronic music and beyond. We are privileged to have personal and strong relationships with many artists, managers and agents, which helps us ensure a smooth and fast operation. The rise and growth in electronic music has brought many new possibilities, from festivals, to collaborations and it has opened doors in the ever-evolving genres of pop, rock and urban.`,
-      isExpanded: false,
+      isExpanded: true,
     },{
       title: 'Event management',
       text: `
@@ -129,7 +138,7 @@ Crafting unique brand identities and aesthetics.
 Enhancing DJ performances / touring with innovative audio, visuals and overall production.
 
 Customising creative solutions for corporate presentations, merchandise, and more…`,
-      isExpanded: false,
+      isExpanded: true,
     },
     {
       title: 'Global rollouts',

@@ -16,7 +16,7 @@ interface MenuItem {
   imports: [CommonModule, RouterLinkActive, RouterLink],
   template: `
     <div>
-      <div class="fixed top-5 right-5 text-white md:hidden block" (click)="toggleMenu()">
+      <div class="absolute top-5 right-5  text-white md:hidden block" (click)="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
              stroke-width="1.5" stroke="currentColor" [class.rotate-180]="menuVisible"
              class="hover:scale-110 cursor-pointer transition-all duration-300 transform w-6 h-6 title bar-button">
